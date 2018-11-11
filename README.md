@@ -1,2 +1,2 @@
 # springbean-dynamic
-Example Creating Spring Bean dynamically in the Runtime
+Example of Creating Spring Bean dynamically in the Runtime

@@ -20,7 +20,7 @@ public class CustomerServiceTest {
 	@Test
 	public void testGetDynamicCustomer() {
 		// Dynamic object creation
-		logger.info("Dynamic Customer: " + customerService.getDynamicCustomer());
+		logger.info("Dynamic Customer: " + customerService.getDynamicCustomer().getName());
 	}
 
 }

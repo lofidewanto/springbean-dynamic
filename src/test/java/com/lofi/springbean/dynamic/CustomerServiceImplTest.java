@@ -10,17 +10,23 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CustomerServiceTest {
+public class CustomerServiceImplTest {
 
-	private static final Logger logger = LoggerFactory.getLogger(CustomerServiceTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(CustomerServiceImplTest.class);
 
 	@Autowired
 	private CustomerServiceImpl customerService;
 
 	@Test
-	public void testGetDynamicCustomer() {
+	public void testGetDynamicCustomerWithAspect() {
 		// Dynamic object creation
-		logger.info("Dynamic Customer: " + customerService.getDynamicCustomer().getName());
+		logger.info("Dynamic Customer with Aspect: " + customerService.getDynamicCustomerWithAspect().getName());
+	}
+
+	@Test
+	public void testGetDynamicCustomerWithMap() {
+		// Object creation with Map
+		logger.info("Dynamic Customer with Map: " + customerService.getDynamicCustomerWithMap().getName());
 	}
 
 }
